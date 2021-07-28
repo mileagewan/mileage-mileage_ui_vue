@@ -118,6 +118,9 @@ class CodeRun extends Vue {
       .editor-run button + button {
         margin-left: 16px;
       }
+      .editor-right {
+        padding: 16px;
+      }
       `
       document.querySelector('head').appendChild(editorStyle)
     }
