@@ -1,5 +1,5 @@
 import { default as Button } from './button'
-
+// import { default as Button } from '../../lib/button'
 const components = [
   Button
 ]
