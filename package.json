@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "main": "./lib/index.js",
+  "sideEffects": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "gulp": "gulp css"
+    "gulp": "gulp css",
+    "dll": "webpack --config webpack.dll.js"
   },
   "dependencies": {
     "@babel/core": "^7.14.8",
@@ -39,7 +41,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "raw-loader": "^4.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack-cli": "^4.9.2"
   },
   "eslintConfig": {
     "root": true,
