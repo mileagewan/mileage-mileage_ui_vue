@@ -8,6 +8,6 @@ Vue.use(VueRouter)
 
 import routes from '../components'
 export default new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   routes,
 })
