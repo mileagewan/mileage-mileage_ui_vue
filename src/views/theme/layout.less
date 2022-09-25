@@ -2,20 +2,30 @@ html,
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #app {
+  width: 100%;
+  height: 100%;
+  background: #fff;
   & > section {
     border: none !important;
   }
 }
 
 .wlc-layout {
+  height: 100%;
   header {
     background: url("./img/bg2.png");
     display: flex;
     align-items: center;
     font-size: 24px;
+  }
+
+  .el-menu {
+    border: none;
   }
 }
 
@@ -45,6 +55,8 @@ pre {
 
   .template-views {
     padding: 24px;
+    background: #fafafa;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
   }
 
   > div {

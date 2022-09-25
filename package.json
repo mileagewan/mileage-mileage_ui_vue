@@ -4,6 +4,7 @@
   "private": true,
   "main": "./lib/index.js",
   "sideEffects": false,
+
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

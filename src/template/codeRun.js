@@ -24,6 +24,13 @@ class CodeRun extends Vue {
     this.formaterCode(this.md)
     this.createStyle()
   }
+
+  mounted() {
+    this.$nextTick(() => {
+      this.handleClick(3)
+    })
+  }
+
   handleClick (p) {
     if (p === 4) {
       this.$root.$emit('goBack', false)
@@ -84,11 +91,13 @@ class CodeRun extends Vue {
         background: #f9f9f9;
         z-index: 9999;
         top: 0;
+        display: flex;
+        
       }
       
       .editor-run .editor-left {
         float: left;
-        width: 40%;
+        width: 49%;
         height: 100%;
       }
       
@@ -131,23 +140,27 @@ class CodeRun extends Vue {
       <div class="editor-run">
         <div class="editor-left">
           <div style="margin-top: 10px">
-            <button onClick={this.handleClick.bind(this, 1)}>Html</button>
-            <button onClick={this.handleClick.bind(this, 2)}>javaScript</button>
             <button class="toRun" onClick={this.handleClick.bind(this, 3)}>运行</button>
             <button class="toRun" onClick={this.handleClick.bind(this, 4)}>返回</button>
 
           </div>
           <div style="width: 100%; height: calc(100% - 42px)">
-            <CodeEitor ref="html"
-              v-show={this.p === 1}
-              type="html"
-              value={this.html} />
-            <CodeEitor
-              ref="js"
-              v-show={this.p === 2}
-              type="javascript"
-              value={this.js}
-            />
+            <div style={{height: '50%'}}>
+              <button onClick={this.handleClick.bind(this, 1)}>Html</button>
+              <CodeEitor ref="html"
+                         type="html"
+                         value={this.html} />
+            </div>
+
+            <div style={{height: '50%'}}>
+              <button onClick={this.handleClick.bind(this, 2)}>javaScript</button>
+              <CodeEitor
+                ref="js"
+                type="javascript"
+                value={this.js}
+              />
+            </div>
+
           </div>
         </div>
         <div class="editor-right">

@@ -107,7 +107,7 @@ class CodeEitor extends Vue {
   }
   render () {
     const style = {
-      height: '300px'
+      height: '400px'
     }
     return <div style={style} />
   }

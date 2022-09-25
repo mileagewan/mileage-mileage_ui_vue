@@ -6,10 +6,11 @@ class Layout extends Vue {
   menu = routes
   render () {
     return (
-      <el-container style="height: 500px; border: 1px solid #eee" class="wlc-layout">
-        <el-header >WLC-UI</el-header>
+      <el-container style="border: 1px solid #eee" class="wlc-layout">
+        <el-header style={{color: '#1a2c3f'}}>跨境公共组件库</el-header>
+        {/*<el-header >WLC-UI</el-header>*/}
         <el-container>
-          <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+          <el-aside width="200px" style="height: 100%;border-right: 1px solid rgb(238, 241, 246)">
             <el-menu default-openeds={['1']} onSelect={this.select.bind(this)} default-active="0">
               {
                 this.menu && this.menu.map((m, index) => {
